@@ -6,11 +6,6 @@
 
 本项目是[Linear-Algebra-Left-Undone](https://github.com/Linear-Algebra-Left-Undone)的衍生项目，专注于整理和汇总线性代数中的核心定理和定义。
 
-## 内容来源
-
-- 主线章节：来自Linear-Algebra-Left-Undone讲义的核心内容
-- 未竟专题：来自Linear-Algebra-Left-Undone的扩展专题
-
 ## 许可证
 
 [![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
