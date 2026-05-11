@@ -167,30 +167,35 @@ $\varphi(\alpha+\beta)=\varphi(\alpha)+\varphi(\beta)$，$\varphi(\lambda\alpha)
 
 **定义 2.6 (数域与线性空间的关系)**  $\mathbf{C}$ 既是 $\mathbf{C}$-线性空间，也是 $\mathbf{R}$-线性空间；$\mathbf{R}$ 是 $\mathbf{R}$-线性空间，但一般不是 $\mathbf{C}$-线性空间。
 
-**定理 2.6 (子空间与线性扩张的等价刻画)**  设 $W$ 是线性空间 $V$ 的子集，则 $W$ 是子空间当且仅当 $\operatorname{span}(W)=W$。
+**定理 2.3 (子空间与线性扩张的等价刻画)**  设 $W$ 是线性空间 $V$ 的子集，则 $W$ 是子空间当且仅当 $\operatorname{span}(W)=W$。
 
-**定理 2.7 (数域扩张下的线性空间)**  设 $\mathbf{E}\subseteq\mathbf{F}$ 是域扩张，则：
+**定理 2.4 (数域扩张下的线性空间)**  设 $\mathbf{E}\subseteq\mathbf{F}$ 是域扩张，则：
 1. $\mathbf{F}$ 是 $\mathbf{E}$ 上的线性空间；
 2. 若 $V$ 是 $\mathbf{F}$ 上的线性空间，则 $V$ 也是 $\mathbf{E}$ 上的线性空间。
 
-**定理 2.8 (有限域上的线性空间视角)**  若 $\mathbf{F}_{p^n}$ 是特征 $p$ 的有限域，则 $\mathbf{F}_{p^n}$ 可视为 $\mathbf{Z}_p$ 上的线性空间。
+**定理 2.5 (有限域上的线性空间视角)**  若 $\mathbf{F}_{p^n}$ 是特征 $p$ 的有限域，则 $\mathbf{F}_{p^n}$ 可视为 $\mathbf{Z}_p$ 上的线性空间。
 
 ##### §2.3 线性子空间
 
-**定义 2.6 (线性子空间)**  设 $W\subseteq V(\mathbf{F})$ 非空，若 $W$ 对 $V$ 的加法与数乘封闭，则 $W$ 为子空间。
+**定义 2.7 (线性子空间)**  设 $W\subseteq V(\mathbf{F})$ 非空，若 $W$ 对 $V$ 的加法与数乘封闭，则 $W$ 为子空间。
 
-**定理 2.3 (子空间判别定理)**  非空子集 $W$ 是子空间 $\iff$ 对加法与数乘封闭。
+**定理 2.6 (子空间判别定理)**  非空子集 $W$ 是子空间 $\iff$ 对加法与数乘封闭。
 
-**定理 2.4 (解空间性质)**  齐次线性方程组 $AX=0$ 的解集是 $\mathbf{F}^n$ 的子空间；非齐次方程组解集不是子空间。
+**定理 2.7 (解空间性质)**  齐次线性方程组 $AX=0$ 的解集是 $\mathbf{F}^n$ 的子空间；非齐次方程组解集不是子空间。
 
 ##### §2.4 线性表示与线性扩张
 
-**定义 2.7 (线性组合/线性表示)**  若 $\alpha=\lambda_1\alpha_1+\cdots+\lambda_m\alpha_m$，则 $\alpha$ 为向量组的线性组合（线性表示）。
+**定义 2.8 (线性组合/线性表示)**  若 $\alpha=\lambda_1\alpha_1+\cdots+\lambda_m\alpha_m$，则 $\alpha$ 为向量组的线性组合（线性表示）。
 
-**定义 2.8 (线性扩张)**  子集 $S$ 的线性扩张为
+**定义 2.9 (线性扩张)**  子集 $S$ 的线性扩张为
 $\operatorname{span}(S)=\{\lambda_1\alpha_1+\cdots+\lambda_k\alpha_k\mid\lambda_i\in\mathbf{F},\alpha_i\in S\}$。
 
-**定理 2.5 (线性扩张构造子空间)**  $\operatorname{span}(S)$ 是包含 $S$ 的最小子空间。
+**定理 2.8 (线性扩张构造子空间)**  $\operatorname{span}(S)$ 是包含 $S$ 的最小子空间。
+
+**定理 2.9 (线性方程组解的表示)**  设 $\lambda\beta+\lambda_1\alpha_1+\cdots+\lambda_r\alpha_r=\vec{0}$，若 $\lambda\ne0$，则
+$$
+\beta=-\lambda^{-1}\lambda_1\alpha_1-\cdots-\lambda^{-1}\lambda_r\alpha_r.
+$$
 
 **方法 2.1 (子空间判别框架)**  验证非空；证明对加法与数乘封闭即可。
 
@@ -239,38 +244,44 @@ $\operatorname{span}(S)=\{\lambda_1\alpha_1+\cdots+\lambda_k\alpha_k\mid\lambda_
 
 **定义 3.3 (基与维数)**  若有限向量组 $B$ 线性无关且 $\operatorname{span}(B)=V$，则 $B$ 为基，$\dim V=|B|$。
 
-**定理 3.6 (维数基本判别)**
+**定理 3.6 (有限维线性空间基的存在性)**  有限维线性空间一定存在基。
+
+**定理 3.7 (维数基本判别)**
 1. $n$ 维空间任意 $n+1$ 个向量线性相关；
 2. 任意 $n-1$ 个向量不能张成 $V$；
 3. $n$ 个向量线性无关 $\iff$ 可表示 $V$ 中任意向量。
 
-**定理 3.7 (子空间基可扩充)**  若 $W$ 是 $n$ 维空间 $V$ 的子空间，则 $W$ 的基可扩充为 $V$ 的基。
+**定理 3.8 (子空间基可扩充)**  若 $W$ 是 $n$ 维空间 $V$ 的子空间，则 $W$ 的基可扩充为 $V$ 的基。
 
 **定义 3.4 (有限维/无限维)**  存在有限子集张成则有限维，否则无限维。
 
-**定理 3.11 (子空间维数的不等式)**  设 $U$ 和 $W$ 是 $V$ 的非零子空间，且 $U\subseteq W$，则 $\dim U\le\dim W$；若 $\dim U=\dim W$，则 $U=W$。
+**定理 3.9 (子空间维数的不等式)**  设 $U$ 和 $W$ 是 $V$ 的非零子空间，且 $U\subseteq W$，则 $\dim U\le\dim W$；若 $\dim U=\dim W$，则 $U=W$。
 
-**定理 3.12 (有限维线性空间的判定)**  $\mathbf{R}[x]_3$ 是有限维线性空间；$\mathbf{R}[x]$ 是无限维线性空间。
+**定理 3.10 (有限维线性空间的判定)**  $\mathbf{R}[x]_3$ 是有限维线性空间；$\mathbf{R}[x]$ 是无限维线性空间。
 
 ##### §3.4 向量的坐标
 
-**引理 3.4 (初等行变换不改变列的线性相关性)**  对任何矩阵，任意初等行变换均可表示为可逆矩阵左乘，故初等行变换不改变列向量组的线性相关性：若矩阵 $A$ 的列向量线性相关，则对任意可逆矩阵 $P$，列向量组 of $PA$ 仍线性相关；反之亦然。
+**引理 3.2 (初等行变换不改变列的线性相关性)**  对任何矩阵，任意初等行变换均可表示为可逆矩阵左乘，故初等行变换不改变列向量组的线性相关性：若矩阵 $A$ 的列向量线性相关，则对任意可逆矩阵 $P$，列向量组 of $PA$ 仍线性相关；反之亦然。
 
-**引理 3.5 (极大线性无关组的构造方法)**  给定向量组 $S$，通过逐一扫描 $S$ 并保留不被前面已选向量张成的向量，同时丢弃能被前面张成的向量，可构造出 $S$ 的一个极大线性无关子集 $B$；所得 $B$ 是 $\operatorname{span}(S)$ 的一组基当且仅当 $\operatorname{span}(B)=\operatorname{span}(S)$。
+**引理 3.3 (极大线性无关组的构造方法)**  给定向量组 $S$，通过逐一扫描 $S$ 并保留不被前面已选向量张成的向量，同时丢弃能被前面张成的向量，可构造出 $S$ 的一个极大线性无关子集 $B$；所得 $B$ 是 $\operatorname{span}(S)$ 的一组基当且仅当 $\operatorname{span}(B)=\operatorname{span}(S)$。
 
 **定义 3.5 (坐标)**  若 $B=\{\beta_1,\ldots,\beta_n\}$ 为 $V$ 的基，$\alpha=\sum a_i\beta_i$，则 $(a_1,\ldots,a_n)$ 为 $\alpha$ 在 $B$ 下的坐标。
 
-**定理 3.8 (坐标映射同构)**  坐标映射 $\varphi_B:V\to\mathbf{F}^n$ 为线性同构，任意 $n$ 维线性空间同构于 $\mathbf{F}^n$。
+**定理 3.11 (坐标映射同构)**  坐标映射 $\varphi_B:V\to\mathbf{F}^n$ 为线性同构，任意 $n$ 维线性空间同构于 $\mathbf{F}^n$。
 
 ##### §3.5 算法与方法
-
-**引理 3.2 (初等行变换不改变列相关性)**  三类初等行变换不改变列向量线性相关性。
 
 **算法 3.1 (极大线性无关组求法)**  将向量作列排成矩阵并化为阶梯形，取主元列对应原向量即得一组极大线性无关组。
 
 **算法 3.2 (扩基算法)**  取原无关组与一组基合并后求极大线性无关组，保留原向量得到扩张基。
 
-**定理 3.9 (替换定理/交换引理)**  若 $\alpha_1,\ldots,\alpha_r$ 线性无关且可由 $\beta_1,\ldots,\beta_n$ 表示，则可用 $\alpha_1,\ldots,\alpha_r$ 替换 $\beta$ 中 $r$ 个向量并保持等价（可用归纳法证明）。
+**定理 3.12 (替换定理/交换引理)**  若 $\alpha_1,\ldots,\alpha_r$ 线性无关且可由 $\beta_1,\ldots,\beta_n$ 表示，则可用 $\alpha_1,\ldots,\alpha_r$ 替换 $\beta$ 中 $r$ 个向量并保持等价（可用归纳法证明）。
+
+##### §3.6 补充说明与隐含定理
+
+**定理 3.13 (线性相关性的判定：特殊函数空间)**  对函数空间中的向量组（函数），可通过代入特殊值构造方程组以判定线性相关性。
+
+**定理 3.14 (不同数域下线性空间维数的差异)**  同一集合在不同数域上构成的线性空间可能具有不同维数，例如：$\mathbf{C}$ 作为 $\mathbf{C}$-线性空间维数为 $1$，作为 $\mathbf{R}$-线性空间维数为 $2$。
 
 ---
 
@@ -294,6 +305,10 @@ $\operatorname{span}(S)=\{\lambda_1\alpha_1+\cdots+\lambda_k\alpha_k\mid\lambda_
 
 **定理 4.2 (覆盖定理)**  若 $V_1,\ldots,V_s$ 为 $V$ 的非平凡子空间，则 $V_1\cup\cdots\cup V_s\subsetneq V$。
 
+**引理 4.1 (覆盖定理的归纳基础)**  当 $s=2$ 时结论成立：取 $\alpha\notin V_1$，若 $\alpha\notin V_2$ 则成立；若 $\alpha\in V_2$，取 $\beta\notin V_2$，则 $\alpha+\beta$ 与 $2\alpha+\beta$ 至少有一个不在 $V_1\cup V_2$。
+
+**引理 4.2 (覆盖定理的归纳步骤)**  假设对 $s-1$ 个子空间结论成立，则对 $s$ 个子空间亦成立（用归纳假设与两子空间情形构造向量）。
+
 **方法 4.1 (数学归纳法框架)**  证明对 $s=2$ 成立，再假设 $s-1$ 成立推出 $s$ 成立。
 
 ##### §4.3 维数公式
@@ -307,6 +322,8 @@ $$\dim W_1+\dim W_2=\dim(W_1+W_2)+\dim(W_1\cap W_2).$$
 
 **定义 4.3 (直和与互补子空间)**  若 $W_1\cap W_2=\{0\}$，称 $W_1+W_2$ 为直和，记作 $W_1\oplus W_2$；若 $V=W_1\oplus W_2$，则称二者互补。
 
+**定义 4.4 (多个子空间的直和)**  设 $W_1,\ldots,W_n$ 是 $V$ 的子空间。若对每个 $i$ 有 $W_i\cap\sum_{j\ne i}W_j=\{0\}$，则称 $\sum_{i=1}^n W_i$ 为直和，记作 $\bigoplus_{i=1}^n W_i$。
+
 **定理 4.4 (直和等价命题)**  下列条件等价：
 1. $W_1+W_2$ 为直和；
 2. 任意 $\alpha\in W_1+W_2$ 分解 $\alpha=\alpha_1+\alpha_2$ 唯一；
@@ -318,11 +335,15 @@ $$V=V_{11}\oplus\cdots\oplus V_{1s}\oplus V_{21}\oplus\cdots\oplus V_{2t}.$$
 
 ##### §4.5 仿射子集与商空间
 
+**定义 4.5 (由子空间诱导的等价关系)**  设 $U$ 是 $V$ 的子空间，定义 $V$ 上的关系 $\sim$ 为 $\alpha\sim\beta\iff\alpha-\beta\in U$；等价类记作 $\overline{\alpha}=\alpha+U$。
+
 **定理 4.6 (零类为子空间)**  若 $R$ 为与线性运算相容的等价关系，则零向量等价类 $\overline{0}$ 为子空间。
+
+**引理 4.3 (等价关系的相容性)**  若 $\alpha_1\sim\alpha_2$、$\beta_1\sim\beta_2$，则 $(\alpha_1+\beta_1)\sim(\alpha_2+\beta_2)$ 且 $\lambda\alpha_1\sim\lambda\alpha_2$（$\lambda\in\mathbf{F}$）。
 
 **定理 4.7 (等价关系与子空间)**  设 $U=\overline{0}$，则 $v_1Rv_2\iff v_1-v_2\in U$。
 
-**定义 4.4 (仿射子集)**  设 $U$ 为子空间，$v+U=\{v+u\mid u\in U\}$ 称为仿射子集。
+**定义 4.6 (仿射子集)**  设 $U$ 为子空间，$v+U=\{v+u\mid u\in U\}$ 称为仿射子集。
 
 **定理 4.8 (仿射子集判别)**  对 $v,w\in V$，以下等价：
 1. $v-w\in U$；
@@ -331,9 +352,11 @@ $$V=V_{11}\oplus\cdots\oplus V_{1s}\oplus V_{21}\oplus\cdots\oplus V_{2t}.$$
 
 **定理 4.9 (仿射子集的等价刻画)**  非空子集 $A$ 是仿射子集 $\iff$ $\forall v,w\in A,\forall\lambda\in\mathbf{F}$，有 $\lambda v+(1-\lambda)w\in A$。
 
-**定义 4.5 (商空间)**  商空间 $V/U=\{v+U\mid v\in V\}$。
+**引理 4.4 (仿射子集的平移结构)**  若 $A$ 是仿射子集，则存在 $v\in V$ 与子空间 $U$ 使得 $A=v+U$。
 
-**定义 4.6 (商空间运算)**  对 $\alpha,\beta\in V$、$\lambda\in\mathbf{F}$，
+**定义 4.7 (商空间)**  商空间 $V/U=\{v+U\mid v\in V\}$。
+
+**定义 4.8 (商空间运算)**  对 $\alpha,\beta\in V$、$\lambda\in\mathbf{F}$，
 1. $(\alpha+U)+(\beta+U)=(\alpha+\beta)+U$；
 2. $\lambda(\alpha+U)=(\lambda\alpha)+U$。
 
@@ -360,6 +383,13 @@ $$\sigma(\lambda\alpha+\mu\beta)=\lambda\sigma(\alpha)+\mu\sigma(\beta),$$
 1. $(\sigma+\tau)(\alpha)=\sigma(\alpha)+\tau(\alpha)$；
 2. $(\lambda\sigma)(\alpha)=\lambda\sigma(\alpha)$。
 
+**定义 5.3 (线性映射的复合)**  设 $\sigma\in\mathcal{L}(V_1,V_2)$，$\tau\in\mathcal{L}(V_2,V_3)$，定义 $\tau\sigma\in\mathcal{L}(V_1,V_3)$ 为
+$$
+(\tau\sigma)(\alpha)=\tau(\sigma(\alpha)),\quad \forall\alpha\in V_1.
+$$
+
+**定义 5.4 (线性映射的逆)**  设 $\sigma\in\mathcal{L}(V_1,V_2)$。若存在 $\tau\in\mathcal{L}(V_2,V_1)$ 使 $\sigma\tau=I_{V_2}$ 且 $\tau\sigma=I_{V_1}$，则称 $\sigma$ 可逆，$\tau$ 称为 $\sigma$ 的逆映射，记为 $\sigma^{-1}$。
+
 **定理 5.3 (线性映射全体构成线性空间)**  $\mathcal{L}(V_1,V_2)$ 在上述运算下为线性空间。
 
 **定理 5.4 (复合映射线性)**  若 $\sigma:V_1\to V_2,\tau:V_2\to V_3$ 线性，则 $\tau\sigma$ 线性。
@@ -368,7 +398,7 @@ $$\sigma(\lambda\alpha+\mu\beta)=\lambda\sigma(\alpha)+\mu\sigma(\beta),$$
 
 ##### §5.3 像与核
 
-**定义 5.3 (像与核)**  像 $\operatorname{im}\sigma=\{\sigma(\alpha)\mid\alpha\in V_1\}$，核 $\ker\sigma=\{\alpha\mid\sigma(\alpha)=0_2\}$。
+**定义 5.5 (像与核)**  像 $\operatorname{im}\sigma=\{\sigma(\alpha)\mid\alpha\in V_1\}$，核 $\ker\sigma=\{\alpha\mid\sigma(\alpha)=0_2\}$。
 
 **定理 5.6 (像与核为子空间)**  $\operatorname{im}\sigma$ 是 $V_2$ 的子空间，$\ker\sigma$ 是 $V_1$ 的子空间。
 
@@ -384,7 +414,7 @@ $$\sigma(\lambda\alpha+\mu\beta)=\lambda\sigma(\alpha)+\mu\sigma(\beta),$$
 
 ##### §5.5 线性映射基本定理
 
-**定义 5.4 (线性映射的秩)**  若 $\sigma(V_1)$ 有限维，定义 $r(\sigma)=\dim\operatorname{im}\sigma$。
+**定义 5.6 (线性映射的秩)**  若 $\sigma(V_1)$ 有限维，定义 $r(\sigma)=\dim\operatorname{im}\sigma$。
 
 **定理 5.10 (线性映射基本定理/秩-零化度公式)**  若 $\dim V_1=n$，则
 $$r(\sigma)+\dim\ker\sigma=n.$$
@@ -398,7 +428,7 @@ $$r(\sigma)+\dim\ker\sigma=n.$$
 
 ##### §5.6 同构
 
-**定义 5.5 (同构)**  线性双射称同构映射；若存在同构映射则 $V_1\cong V_2$。
+**定义 5.7 (同构)**  线性双射称同构映射；若存在同构映射则 $V_1\cong V_2$。
 
 **定理 5.12 (同构保持线性无关与秩)**  同构映射保持向量组线性相关性与秩不变。
 
@@ -406,7 +436,7 @@ $$r(\sigma)+\dim\ker\sigma=n.$$
 
 ##### §5.7 积空间与直和
 
-**定义 5.6 (积空间)**  对 $V_1,\ldots,V_n$，定义
+**定义 5.8 (积空间)**  对 $V_1,\ldots,V_n$，定义
 1. $V_1\times\cdots\times V_n=\{(v_1,\ldots,v_n)\mid v_i\in V_i\}$；
 2. 加法与数乘按分量定义。
 
@@ -433,6 +463,29 @@ $$r(\sigma)+\dim\ker\sigma=n.$$
 4. $\operatorname{im}\sigma=\operatorname{im}\sigma^2$；
 5. $r(\sigma^2)=r(\sigma)$。
 
+##### §5.9 隐含定理与补充结论
+
+**定理 5.21 (像与核和的维数下界)**  设 $\sigma\in\mathcal{L}(V,V)$，$\dim V=n$，则
+$$
+\dim(\ker\sigma+\operatorname{im}\sigma)\ge \frac{n}{2},
+$$
+且等号成立当且仅当 $\ker\sigma=\operatorname{im}\sigma$。
+
+**定理 5.22 (线性映射的秩不等式)**  设 $\sigma\in\mathcal{L}(V_1,V_2)$，$\tau\in\mathcal{L}(V_2,V_3)$，且 $\dim V_1=m$、$\dim V_2=n$、$\dim V_3=s$，则
+$$
+r(\sigma)+r(\tau)-n\le r(\tau\sigma)\le\min\{r(\sigma),r(\tau)\}.
+$$
+
+**定理 5.23 (和映射的秩不等式)**  设 $\sigma,\tau\in\mathcal{L}(V_1,V_2)$，则
+$$
+r(\sigma+\tau)\le r(\sigma)+r(\tau).
+$$
+
+**定理 5.24 (幂零变换的像维数上界)**  设 $\sigma\in\mathcal{L}(V,V)$ 且 $\sigma^2=0$，$\dim V=n$，则
+$$
+\dim\operatorname{im}\sigma\le \frac{n}{2}.
+$$
+
 ---
 
 #### 第6章 对偶空间
@@ -447,9 +500,11 @@ $$r(\sigma)+\dim\ker\sigma=n.$$
 
 **定义 6.3 (对偶基)**  设 $B=\{e_1,\ldots,e_n\}$ 为 $V$ 的基，若 $f_i(e_j)=\delta_{ij}$，则 $\{f_1,\ldots,f_n\}$ 为 $B$ 的对偶基。
 
+**定义 6.4 (交换图)**  以代数结构为顶点、映射为边的有向图称为图（diagram）。若任意两个顶点间的任意两条有向路径的复合结果相同，则称该图为交换的（commutative）。
+
 **定理 6.1 (有限维对偶同构)**  若 $\dim V=n$，则 $V\cong V^*$，并且对偶基是 $V^*$ 的一组基。
 
-**定义 6.4 (对偶映射)**  给定 $f:V\to W$，定义 $f^*:W^*\to V^*$ 为 $f^*(\varphi)=\varphi\circ f$。
+**定义 6.5 (对偶映射)**  给定 $f:V\to W$，定义 $f^*:W^*\to V^*$ 为 $f^*(\varphi)=\varphi\circ f$。
 
 **定理 6.2 (对偶映射的函子性与线性)**
 1. $(f\circ g)^*=g^*\circ f^*$；
@@ -460,7 +515,7 @@ $$r(\sigma)+\dim\ker\sigma=n.$$
 
 ##### §6.2 零化子
 
-**定义 6.5 (零化子)**  子空间 $U\subseteq V$ 的零化子为
+**定义 6.6 (零化子)**  子空间 $U\subseteq V$ 的零化子为
 $$U^0=\{\varphi\in V^*\mid \forall u\in U,\ \varphi(u)=0\}.$$
 
 **定理 6.4 (零化子为子空间)**  $U^0$ 是 $V^*$ 的子空间。
@@ -473,7 +528,7 @@ $$U^0=\{\varphi\in V^*\mid \forall u\in U,\ \varphi(u)=0\}.$$
 1. $f\in(\ker f)^0$；
 2. 若 $f\in U^0$，则 $U\subseteq\ker f$。
 
-**定义 6.6 (公共零点集)**  设 $U\subseteq V^*$，定义
+**定义 6.7 (公共零点集)**  设 $U\subseteq V^*$，定义
 $$Z(U)=\{v\in V\mid \forall \varphi\in U,\ \varphi(v)=0\}.$$ 
 
 **定理 6.8 (NU 性质)**
@@ -504,6 +559,15 @@ $$\varphi^{-1}(r)=v'+\ker\varphi.$$
 **定理 6.12 (子空间可作为核)**  任意子空间 $W\subseteq V$ 均可表示为某线性映射的核。
 
 **定理 6.13 ((V/W)^* 与零化子同构)**  若 $W\subseteq V$，则 $(V/W)^*\cong W^0$。
+
+##### §6.5 隐含定理与重要结论补充
+
+**定理 6.14 (零化子的扩张性质)**  设 $S\subseteq V$，定义 $S^0=\{\varphi\in V^*\mid \forall s\in S,\ \varphi(s)=0\}$，则：
+1. $S^{00}=\operatorname{span} S$；
+2. $S\subseteq T\iff T^0\subseteq S^0$；
+3. 若 $U_1,U_2$ 为 $V$ 的子空间，则 $(U_1+U_2)^0=U_1^0\cap U_2^0$，$(U_1\cap U_2)^0=U_1^0+U_2^0$。
+
+**定理 6.15 (线性泛函的核与商空间)**  设 $\varphi\in\mathcal{L}(V,\mathbf{F})$ 非零，则 $\dim V/(\ker\varphi)=1$；反之，若 $U$ 是 $V$ 的子空间且 $\dim V/U=1$，则存在 $\varphi\in\mathcal{L}(V,\mathbf{F})$ 使 $\ker\varphi=U$。
 
 ---
 
@@ -623,6 +687,37 @@ $$\mathbf{M}_{B_2,B_3}(\tau)\mathbf{M}_{B_1,B_2}(\sigma)=\mathbf{M}_{B_1,B_3}(\t
 2. 若 $A=\begin{pmatrix}B & O\\ C & D\end{pmatrix}$ 且 $B,D$ 可逆，则
 $$A^{-1}=\begin{pmatrix}B^{-1} & O\\ -D^{-1}CB^{-1} & D^{-1}\end{pmatrix}.$$
 
+##### §7.9 补充定理与注意事项
+
+**隐含定理 7.1 (线性映射矩阵表示的坐标关系)**  若线性映射 $\sigma$ 在基 $B_1,B_2$ 下矩阵为 $A$，向量 $\alpha$ 与 $\sigma(\alpha)$ 在相应基下坐标为 $X,Y$，则 $Y=AX$。
+
+**隐含定理 7.2 (矩阵乘法的行列组合性质)**  设 $C=AB$，则：
+1. $C$ 的第 $j$ 列是 $A$ 的各列以 $B$ 的第 $j$ 列为系数的线性组合；
+2. $C$ 的第 $i$ 行是 $B$ 的各行以 $A$ 的第 $i$ 行为系数的线性组合。
+
+**隐含定理 7.3 (矩阵乘法与基变换的结合律)**  设 $\sigma$ 为线性映射，$(\varepsilon_1,\ldots,\varepsilon_n)$ 为一组基向量构成的形式行向量，$B$ 为矩阵，则
+$$
+\sigma((\varepsilon_1,\ldots,\varepsilon_n)B)=(\sigma(\varepsilon_1),\ldots,\sigma(\varepsilon_n))B.
+$$
+
+**隐含定理 7.4 (线性方程组与线性映射的关联)**  设线性映射 $\sigma\in\mathcal{L}(V_1,V_2)$ 在基 $B_1,B_2$ 下矩阵为 $A$。线性方程组 $AX=b$ 的解 $X$ 对应向量 $\alpha\in V_1$ 在基 $B_1$ 下的坐标，使得 $\sigma(\alpha)=\beta$，其中 $\beta$ 在基 $B_2$ 下的坐标为 $b$；齐次方程组 $AX=0$ 的解空间对应于 $\ker\sigma$。
+
+**隐含定理 7.9 (线性映射的像与核的矩阵求法)**  设线性映射 $\sigma\in\mathcal{L}(V_1,V_2)$ 在基 $B_1,B_2$ 下的矩阵为 $A$：
+1. $\operatorname{im}\sigma=\operatorname{span}\{\sigma(B_1)\}$，其维数等于 $A$ 的列秩；
+2. $\ker\sigma$ 中向量在基 $B_1$ 下的坐标构成齐次线性方程组 $AX=0$ 的解空间。
+
+**隐含定理 7.10 (矩阵求幂的技巧：秩 1 矩阵)**  设 $\alpha,\beta$ 为 $n$ 维列向量，$A=\alpha\beta^\mathrm{T}$，则
+$$
+A^k=(\beta^\mathrm{T}\alpha)^{k-1}A.
+$$
+
+**隐含定理 7.11 (矩阵多项式与相似变换)**  若 $A=PBP^{-1}$，$f$ 为多项式，则
+$$
+f(A)=Pf(B)P^{-1}.
+$$
+
+**隐含定理 7.12 (行和与列和的性质)**  设 $A$ 的每行元素之和为常数 $k$，记 $\alpha=(1,1,\ldots,1)^\mathrm{T}$，则 $A\alpha=k\alpha$；若 $A$ 可逆，则 $A^{-1}$ 的每行元素之和为 $1/k$，且 $A^m$ 的每行元素之和为 $k^m$。
+
 ---
 
 #### 第8章 相抵标准形
@@ -643,9 +738,15 @@ $$A^{-1}=\begin{pmatrix}B^{-1} & O\\ -D^{-1}CB^{-1} & D^{-1}\end{pmatrix}.$$
 3. $A$ 的 $n$ 个行（列）向量线性无关；
 4. $AX=0$ 只有零解。
 
+**隐含定理 (对角占优矩阵可逆性)**  若 $A=(a_{ij})_{n\times n}$ 满足 $|a_{ii}|>\sum_{j\ne i}|a_{ij}|$，则 $A$ 可逆。
+
 ##### §8.2 过渡矩阵与基变换
 
 **定义 8.2 (过渡矩阵)**  设 $B_1,B_2$ 为同一线性空间的两组基，若 $B_2=B_1A$，则 $A$ 为 $B_1$ 到 $B_2$ 的过渡矩阵。
+
+**定理 8.2.1 (过渡性质 1)**  设 $S_1=(\alpha_1,\ldots,\alpha_n)$ 线性无关，且 $(\beta_1,\ldots,\beta_s)=S_1A$，则向量组 $(\beta_1,\ldots,\beta_s)$ 的秩等于矩阵 $A$ 的秩。
+
+**定理 8.2.2 (可逆过渡矩阵保等价)**  若向量组 $S_2=S_1A$ 且 $A$ 可逆，则 $S_1$ 与 $S_2$ 等价。
 
 **定理 8.4 (过渡矩阵可逆)**  过渡矩阵必可逆，且 $B_2$ 到 $B_1$ 的过渡矩阵为 $A^{-1}$。
 
@@ -656,12 +757,16 @@ $\mathbf{M}_{B_1',B_2'}(\sigma)=Q^{-1}\mathbf{M}_{B_1,B_2}(\sigma)P$。
 
 **定理 8.7 (相似变换)**  若 $\sigma\in\mathcal{L}(V,V)$ 在基 $B_1,B_2$ 下矩阵为 $A,B$，过渡矩阵为 $C$，则 $B=C^{-1}AC$。
 
+**隐含定理 (向量组等价性判定)**  若两个向量组 $S_2=S_1A$ 且 $A$ 可逆，则 $S_1$ 与 $S_2$ 等价。
+
 ##### §8.3 相抵标准形
 
 **定义 8.3 (相抵)**  若存在可逆矩阵 $P,Q$ 使 $PAQ=B$，则 $A$ 与 $B$ 相抵。
 
 **定理 8.8 (相抵标准形)**  $A$ 为 $m\times n$ 矩阵，$r(A)=r$ 当且仅当存在可逆 $P,Q$ 使
 $PAQ=\begin{pmatrix}E_r & O \\ O & O\end{pmatrix}$。
+
+**引理 8.3.1 (矩阵行秩=列秩的第三种证明)**  利用相抵标准形与转置，可证明矩阵的行秩等于列秩。
 
 **定理 8.9 (相抵判别)**  $A$ 与 $B$ 相抵 $\iff r(A)=r(B)$。
 
@@ -673,9 +778,17 @@ $PAQ=\begin{pmatrix}E_r & O \\ O & O\end{pmatrix}$。
 
 **定理 8.11 (初等矩阵分解)**  初等矩阵均可逆，其逆仍为初等矩阵；任意可逆矩阵可表示为初等矩阵乘积。
 
+**引理 8.4.2 (初等变换求逆矩阵)**  若对 $(A\mid E)$ 作一系列初等行变换将 $A$ 化为 $E$，则同时 $E$ 被化为 $A^{-1}$。
+
 **定理 8.12 (秩不变性)**  初等行列变换不改变矩阵秩，等价地 $r(PAQ)=r(A)$（$P,Q$ 可逆）。
 
 ##### §8.5 相抵标准形应用
+
+**定理 8.5.1 (相抵标准形的矩阵角度证明)**  利用初等行列变换与秩不变性，可证明存在 $P,Q$ 使 $PAQ$ 为相抵标准形。
+
+**定义 8.5.1 (相抵的等价定义)**  两个矩阵相抵当且仅当它们可以通过一系列初等行变换与列变换互相转化。
+
+**隐含定理 (初等变换与基变换的关系)**  对线性映射的表示矩阵做初等行（列）变换，等价于对目标空间（出发空间）的基做相应的初等变换。
 
 **定理 8.13 (满秩矩阵的左右逆)**
 1. 若 $A$ 列满秩，则存在 $B$ 使 $BA=E$；
@@ -686,6 +799,23 @@ $PAQ=\begin{pmatrix}E_r & O \\ O & O\end{pmatrix}$。
 **方法 8.1 (求相抵标准形)**  对 $A$ 施行行列初等变换化为 $\operatorname{diag}(E_r,0)$，并记录对应的 $P,Q$。
 
 **方法 8.2 (相抵标准形的算法化表述)**  先作初等行变换化到行简化阶梯形，再作初等列变换化到 $U_r$；同时累积行、列变换矩阵乘积，即可得到 $PAQ=U_r$。
+
+##### §8.6 重要补充与说明
+
+**定义 8.6.1 (迹)**  设 $A=(a_{ij})_{n\times n}$，其主对角元之和称为 $A$ 的迹，记作 $\operatorname{tr}(A)=\sum_{i=1}^n a_{ii}$。
+
+**隐含定理 (矩阵添加行列对秩的影响)**  矩阵添加一列（或一行），其秩不变或增加 $1$。
+
+**隐含定理 (分块矩阵的秩不等式)**  设 $A$ 是 $s\times n$ 矩阵，$B$ 是 $A$ 前 $m$ 行构成的 $m\times n$ 矩阵，则
+$$
+r(B)\ge r(A)+m-s.
+$$
+
+**隐含定理 (线性相关性的循环判定)**  当 $n$ 为奇数时，向量组 $\alpha_1,\alpha_2,\ldots,\alpha_n$ 线性无关当且仅当
+$$
+\alpha_1+\alpha_2,\ \alpha_2+\alpha_3,\ \ldots,\ \alpha_n+\alpha_1
+$$
+线性无关。
 
 ---
 
@@ -716,6 +846,8 @@ $PAQ=\begin{pmatrix}E_r & O \\ O & O\end{pmatrix}$。
 
 **方法 9.1 (平移简化法)**  选取 $t$ 使 $AB=BA \iff (A-tE)B=B(A-tE)$，便于计算。
 
+**定理 9.2.1 (可交换矩阵的一般形式)**  若 $B$ 与 $A$ 可交换，则在特定条件下（如 $A$ 为循环矩阵），$B$ 可表示为关于 $A$ 的多项式。
+
 **定理 9.5 (可交换矩阵的结构刻画)**
 1. 与主对角元两两不同的对角矩阵可交换的矩阵必为对角矩阵；
 2. 与分块对角且分块标量不同的矩阵可交换者必为同分块对角；
@@ -729,6 +861,12 @@ $PAQ=\begin{pmatrix}E_r & O \\ O & O\end{pmatrix}$。
 2. $\operatorname{tr}(kA)=k\operatorname{tr}(A)$；
 3. $\operatorname{tr}(A^\mathrm{T})=\operatorname{tr}(A)$；
 4. $\operatorname{tr}(AB)=\operatorname{tr}(BA)$。
+
+**定理 9.3.2 (迹与对称矩阵的关系)**  设 $A$ 为 $n$ 阶实矩阵，则
+$$
+\operatorname{tr}(A^2)\le \operatorname{tr}(A^\mathrm{T}A),
+$$
+且等号成立当且仅当 $A$ 为对称矩阵。
 
 **推论 9.1 (迹的正定性)**  若 $A$ 为实矩阵，则 $\operatorname{tr}(A^\mathrm{T}A)\ge0$ 且等号当且仅当 $A=O$。
 
@@ -746,13 +884,29 @@ $(A+XRY)^{-1}=A^{-1}-A^{-1}X(R^{-1}+YA^{-1}X)^{-1}YA^{-1}$。
 
 **方法 9.4 (提逆思想)**  通过提取可逆因子将 $(E-A^{-1})^{-1}$ 化为 $(A-E)^{-1}A$ 等形式。
 
+**定理 9.4.5 (提逆恒等式)**  若 $E-A$、$E+A$、$A$ 均可逆，则
+$$
+(E-A^{-1})^{-1}+(E-A)^{-1}=E.
+$$
+
 ##### §9.5 矩阵的幂
+
+**定理 9.5.1 (幂的计算：找规律)**  若存在可逆矩阵 $P$ 使 $A=PDP^{-1}$，则 $A^n=PD^nP^{-1}$；特别地，对角矩阵 $D$ 的幂可直接逐项求得。
 
 **定理 9.9 (幂零三角矩阵)**  上（下）三角矩阵若主对角元全为 $0$，则 $A^n=O$。
 
 **定理 9.10 (循环与若当块幂公式)**  基础循环矩阵与若当块矩阵的幂可用移位规律求得。
 
 **定理 9.11 (秩 1 矩阵幂)**  若 $r(M)=1$，则 $M^k=(\operatorname{tr} M)^{k-1}M$。
+
+**定理 9.5.5 (秩 1 矩阵的多项式幂)**  设 $M$ 为秩 $1$ 矩阵且 $\operatorname{tr}(M)=b$，则对任意 $a$ 与正整数 $n$，有
+$$
+(aE+M)^n=
+\begin{cases}
+a^nE+na^{n-1}M, & b=0,\\
+a^nE+\dfrac{(a+b)^n-a^n}{b}M, & b\ne0.
+\end{cases}
+$$
 
 ##### §9.6 分块矩阵初等变换（打洞法）
 
@@ -771,6 +925,8 @@ $\begin{pmatrix}A & B \\ C & D\end{pmatrix}^{-1}=\begin{pmatrix}(A-BD^{-1}C)^{-1
 ##### §9.7 矩阵方程
 
 **定理 9.16 (矩阵方程求解公式)**  $AX=B\Rightarrow X=A^{-1}B$，$XA=B\Rightarrow X=BA^{-1}$，$AXB=C\Rightarrow X=A^{-1}CB^{-1}$。
+
+**定理 9.7.2 (矩阵方程的化简)**  若矩阵方程可化为 $(A-B)X(A-B)=A(A-B)$ 且 $A-B$ 可逆，则 $X=(A-B)^{-1}A$。
 
 **方法 9.5 (增广矩阵求解)**  通过对 $(A\mid B)$ 做初等行变换得到 $(E\mid A^{-1}B)$；对 $\begin{pmatrix}A\\ B\end{pmatrix}$ 做初等列变换得到 $\begin{pmatrix}E\\ BA^{-1}\end{pmatrix}$。
 
@@ -792,6 +948,8 @@ $\begin{pmatrix}A & B \\ C & D\end{pmatrix}^{-1}=\begin{pmatrix}(A-BD^{-1}C)^{-1
 **定理 9.21 (Sylvester 不等式)**  若 $A\in\mathbf{F}^{s\times n},B\in\mathbf{F}^{n\times m}$，则 $r(AB)\ge r(A)+r(B)-n$。
 
 **定理 9.22 (Frobenius 不等式)**  $r(ABC)\ge r(AB)+r(BC)-r(B)$。
+
+**定理 9.8.7 (秩的递推稳定性)**  若存在正整数 $m$ 使 $r(A^m)=r(A^{m+1})$，则对任意 $k\ge m$，有 $r(A^k)=r(A^m)$；特别地，对 $n$ 阶矩阵 $A$，必有 $r(A^n)=r(A^{n+1})=\cdots$。
 
 ---
 
@@ -1194,6 +1352,31 @@ $$
 1. 所有特征值都落在 $\bigcup_i D_i$ 中。
 2. 若若干圆盘并成的连通分支两两不交，则每个分支包含的特征值个数等于该分支内圆盘个数（按代数重数计）。
 
+##### §14.5 补充定理
+
+**定理 14.3.10 (矩阵方程 $AX-XB=O$ 的解的秩)**  设 $A,B$ 分别为数域 $\mathbf{F}$ 上 $n$ 阶、$m$ 阶方阵，$A,B$ 有 $r$ 个两两不等的公共特征值，则矩阵方程 $AX-XB=O$ 有秩为 $r$ 的矩阵解。反之，若数域为复数域，矩阵方程 $AX-XB=O$ 有秩为 $r$ 的矩阵解，则 $A,B$ 至少有 $r$ 个公共特征值（计重数）。
+
+**定理 14.4.1 (线性变换在商空间上的诱导映射)**  设 $\sigma\in\mathcal{L}(V,W)$，定义 $\widetilde{\sigma}:(V/(\ker\sigma))\to W$ 为 $\widetilde{\sigma}(v+\ker\sigma)=\sigma(v)$，则：
+1. $\widetilde{\sigma}$ 良定义且为线性映射；
+2. $\widetilde{\sigma}$ 为单射；
+3. $\operatorname{im}\widetilde{\sigma}=\operatorname{im}\sigma$；
+4. $V/(\ker\sigma)\cong \operatorname{im}\sigma$。
+
+**定理 14.4.2 (数乘变换的刻画)**  设 $T\in\mathcal{L}(V)$，则 $T$ 为数乘变换 $T=cI_V$ 的充要条件是 $V$ 的每个一维子空间都是 $T$ 的不变子空间。
+
+**定理 14.4.3 (商线性变换的性质)**  设 $V$ 有限维，$T\in\mathcal{L}(V)$ 且 $U$ 在 $T$ 下不变，则 $T/U$ 的每个特征值均为 $T$ 的特征值。
+
+**定理 14.4.5 (可交换线性变换有公共特征向量)**  若 $AB=BA$，则 $A$ 和 $B$ 至少有一个共同特征向量。
+
+**定理 14.4.6 (特征值平方和与矩阵元素)**  设 $\lambda_1,\ldots,\lambda_n$ 是矩阵 $A=(a_{ij})_{n\times n}$ 的特征值，则 $\lambda_1^2,\ldots,\lambda_n^2$ 是 $A^2$ 的特征值，且
+$$
+\sum_{i=1}^n \lambda_i^2=\sum_{j=1}^n\sum_{k=1}^n a_{jk}a_{kj}.
+$$
+
+**定理 14.4.7 (严格对角占优矩阵可逆性)**  严格对角占优的矩阵是可逆的。
+
+**定理 14.4.8 (矩阵多项式的可逆性)**  设 $A,B\in\mathbf{M}_n(\mathbf{C})$，$B$ 的特征多项式 $f(\lambda)=|\lambda E-B|$，则 $f(A)$ 可逆当且仅当 $B$ 的任一特征值都不是 $A$ 的特征值。
+
 ---
 
 #### 第15章 相似标准形：复数域上的尝试与理论
@@ -1577,7 +1760,14 @@ $$
 
 **定义 20.3 (奇异值)**  $\sigma_i=\sqrt{\lambda_i(T^*T)}\ge0$ 称 $T$ 的奇异值。
 
-**定理 20.6 (SVD)**  任意矩阵存在酉（或正交）矩阵 $U,V$ 使
+**定理 20.6 (奇异值与单射满射的关系)**  设 $T\in\mathcal{L}(V,W)$，则：
+1. $T$ 是单射 $\iff 0$ 不是 $T$ 的奇异值；
+2. $T$ 的正奇异值个数等于 $\dim\operatorname{im} T$；
+3. $T$ 是满射 $\iff$ 正奇异值个数等于 $\dim W$。
+
+**定义 20.4 (矩形对角矩阵)**  设 $A=(a_{ij})_{m\times n}$，若 $i\ne j$ 时 $a_{ij}=0$，则称 $A$ 为矩形对角矩阵。
+
+**定理 20.7 (SVD)**  任意矩阵存在酉（或正交）矩阵 $U,V$ 使
 $$
 A=U\Sigma V^*,
 $$
@@ -1587,10 +1777,16 @@ $$
 1. 算子 2-范数等于最大奇异值：$\|A\|_2=\sigma_{\max}(A)$。
 2. 矩阵秩等于非零奇异值个数。
 
-**定理 20.7 (奇异值分解的展开式)**  设 $A$ 的正奇异值为 $\sigma_1\ge\cdots\ge\sigma_r>0$，对应左、右奇异向量分别为 $u_1,\ldots,u_r$ 与 $v_1,\ldots,v_r$，则
+**定理 20.8 (奇异值分解的展开式)**  设 $A$ 的正奇异值为 $\sigma_1\ge\cdots\ge\sigma_r>0$，对应左、右奇异向量分别为 $u_1,\ldots,u_r$ 与 $v_1,\ldots,v_r$，则
 $$
 A x=\sum_{i=1}^r \sigma_i\langle x,v_i\rangle u_i.
 $$
+
+**定理 20.9 (特征人脸算法中的奇异值分解应用)**  设 $A\in\mathbf{R}^{m\times n}$ 为中心化后的人脸数据矩阵，$A=U\Sigma V^\mathsf{T}$，则：
+1. $U$ 的列向量是 $AA^\mathsf{T}$ 的特征向量；
+2. $V$ 的列向量是 $A^\mathsf{T}A$ 的特征向量；
+3. 若 $u_i$ 是 $AA^\mathsf{T}$ 的特征向量（特征值 $\lambda_i$），则 $A^\mathsf{T}u_i$ 是 $A^\mathsf{T}A$ 的特征向量（同一特征值 $\lambda_i$）；
+4. 前 $k$ 个主要特征向量可由 $(v_1,\ldots,v_k)=A^\mathsf{T}(u_1,\ldots,u_k)$ 计算（归一化后作为投影基）。
 
 **方法 20.1 (截断奇异值近似)**  若只保留前 $k$ 个最大奇异值及对应奇异向量，则得到最优秩 $k$ 近似；等价地，用前 $k$ 个主方向构造低秩逼近。
 
@@ -1682,6 +1878,47 @@ $$
 
 **定理 21.4 (二次曲面标准化框架)**  任意二次曲面可经平移与正交变换化到主轴标准形，分类由二次型符号结构决定。
 
+##### §21.4 曲面上的标架
+
+**定义 21.5 (切平面)**  设曲面 $S$ 的参数方程为 $\vec r(u,v)=(x(u,v),y(u,v),z(u,v))$，在点 $\vec r_0=\vec r(u_0,v_0)$ 处，切向量 $\vec t_u=\partial\vec r/\partial u$ 与 $\vec t_v=\partial\vec r/\partial v$ 张成的平面称为曲面在 $\vec r_0$ 处的切平面，记为 $T_{\vec r_0}S$。
+
+**定义 21.6 (法向量)**  切平面的单位法向量称为曲面在该点处的法向量，记为 $\vec n$。
+
+**定义 21.7 (第一基本形式)**  曲面 $S$ 的第一基本形式为
+$$
+\mathrm{d}s^2=E\,\mathrm{d}u^2+2F\,\mathrm{d}u\,\mathrm{d}v+G\,\mathrm{d}v^2,
+$$
+其中 $E=\vec t_u\cdot\vec t_u$，$F=\vec t_u\cdot\vec t_v$，$G=\vec t_v\cdot\vec t_v$。
+
+**定理 21.5 (第一基本形式的参数变换规律)**  若参数变换为 $(\tilde u,\tilde v)=(\tilde u(u,v),\tilde v(u,v))$，则新旧第一基本形式的系数矩阵满足
+$$
+\begin{pmatrix}\tilde E & \tilde F \\ \tilde F & \tilde G\end{pmatrix}
+=J^\mathsf{T}\begin{pmatrix}E & F \\ F & G\end{pmatrix}J,
+$$
+其中 $J=\begin{pmatrix}\partial u/\partial\tilde u & \partial u/\partial\tilde v \\ \partial v/\partial\tilde u & \partial v/\partial\tilde v\end{pmatrix}$ 为 Jacobi 矩阵。
+
+**引理 21.1 (第一基本形式正定性)**  第一基本形式是正定的，即 $E>0$、$G>0$、$EG-F^2>0$。
+
+##### §21.5 二次曲面及其分类
+
+**定义 21.8 (二次曲面)**  二次曲面的一般方程为
+$$
+ax^2+by^2+cz^2+2dyz+2exz+2fxy+gx+hy+iz=1,
+$$
+或写成矩阵形式
+$$
+\begin{pmatrix}x&y&z\end{pmatrix}
+\begin{pmatrix}a&f&e\\ f&b&d\\ e&d&c\end{pmatrix}
+\begin{pmatrix}x\\y\\z\end{pmatrix}
++\begin{pmatrix}g&h&i\end{pmatrix}\begin{pmatrix}x\\y\\z\end{pmatrix}=1.
+$$
+
+**定理 21.6 (二次曲面的标准化)**  任意二次曲面可经等距变换（旋转与平移）化为
+$$
+ax^2+by^2+cz^2=d,
+$$
+其中 $a,b,c$ 为二次型矩阵的特征值。
+
 ---
 
 #### 第22章 二次型
@@ -1695,6 +1932,10 @@ $$
 **补充引理 22.1 (初等变换与合同变换 2)**  若 $A$ 是非零对称矩阵，则必定存在可逆矩阵 $C$ 使得 $C^\mathrm{T}AC$ 的第 $(1,1)$ 个元素不为 $0$。
 
 **补充定理 22.0 (对称矩阵合同对角化)**  设 $A$ 是 $n$ 阶对称矩阵，则必存在可逆矩阵 $C$ 使得 $C^\mathrm{T}AC$ 为对角矩阵。
+
+**补充定理 22.2 (实对称矩阵的相合性质)**  设 $A,B$ 为 $n$ 阶实对称矩阵且 $A\simeq B$，则：
+1. 对任意正整数 $m$，有 $A^m\simeq B^m$；
+2. 若 $A$ 可逆，则 $A^{-1}\simeq B^{-1}$。
 
 ##### §22.1 定义与矩阵表示
 
@@ -1716,6 +1957,8 @@ $$
 
 **定理 22.2 (Sylvester 惯性定理)**  实对称矩阵合同对角化后正负零对角元个数不变量（惯性指数）。
 
+**定理 22.2.1 (复二次型的标准形)**  任意 $n$ 元复二次型 $f(X)$ 可经可逆复线性替换化为规范形 $y_1^2+\cdots+y_r^2$，其中 $r$ 为 $f$ 的秩。
+
 **定义 22.3 (正定/半正定)**  对任意 $x\neq0$，$x^\mathsf{T}Ax>0$（或 $\ge0$）。
 
 **定理 22.3 (Sylvester 正定判据)**  实对称矩阵正定当且仅当前导主子式全正。
@@ -1735,6 +1978,12 @@ $$
 
 **定理 22.7 (Cauchy 交错与 Weyl 不等式)**  主子矩阵特征值满足交错；和矩阵特征值满足 Weyl 型夹逼。
 
+##### §22.4 标准形的应用
+
+**定理 22.8 (矩阵的幂等分解)**  任意 $n$ 阶方阵 $A$ 可分解为可逆矩阵 $B$ 与幂等矩阵 $C$ 的乘积，即 $A=BC$。
+
+**定理 22.9 (实对称矩阵的乘积分解)**  秩为 $r$ 的 $n$ 阶实对称矩阵 $A$ 可表示为 $n-r$ 个秩为 $n-1$ 的实对称矩阵的乘积。
+
 ---
 
 #### 第23章 多重线性映射与张量的计算
@@ -1742,6 +1991,12 @@ $$
 ##### §23.0 基本定义与张量积
 
 **补充定义 23.1 (多重线性映射)**  设 $V_1,\ldots,V_n,W$ 为线性空间，若映射 $f:V_1\times\cdots\times V_n\to W$ 对任意一个分量都是线性的，则称 $f$ 为多重线性映射.
+
+**补充定义 23.3 (多重线性映射的矩阵表示)**  设 $f\in\mathcal{L}(V_1,V_2;W)$，$V_1$ 的基为 $\{e_1,\ldots,e_n\}$。定义 $f_i(v_2)=f(e_i,v_2)$，则 $f_i$ 是 $V_2\to W$ 的线性映射，设其矩阵为 $M_i$。对 $v_1=\sum \lambda_i e_i$，有
+$$
+f(v_1,v_2)=(\lambda_1 M_1+\cdots+\lambda_n M_n)\,v_2,
+$$
+形式地记作 $f(v_1,v_2)=v_1^\mathsf{T}\begin{pmatrix}M_1\\ \vdots\\ M_n\end{pmatrix}v_2$（为形式记号，非标准矩阵乘法）。
 
 **补充引理 23.1 ($\mathcal{L}(V,W^*;\R)\cong\mathcal{L}(V,W)$)**  线性空间 $\mathcal{L}(V,W^*;\R)$ 与 $\mathcal{L}(V,W)$ 线性同构.
 
@@ -1788,6 +2043,12 @@ $$
 **定义 23.3 (张量分量与 Einstein 约定)**  重复上下指标默认求和，可统一表达坐标变换与缩并。
 
 **定理 23.3 (张量分量变换律)**  张量分量按各指标类型（协变/逆变）分别乘以基变换矩阵与其逆矩阵。
+
+**定理 23.3.3 (张量的坐标变换公式)**  设 $V$ 有两组基 $\{e_i\}$ 与 $\{\tilde e_i\}$，过渡矩阵为 $M$，即 $\tilde e_i=M_i^j e_j$（Einstein 求和）。设 $T$ 为 $(r,s)$ 型张量，在两组基下的分量分别为 $T_{j_1\cdots j_s}^{i_1\cdots i_r}$ 与 $\tilde T_{j_1\cdots j_s}^{i_1\cdots i_r}$，则
+$$
+	ilde T_{j_1\cdots j_s}^{i_1\cdots i_r}=T_{l_1\cdots l_s}^{k_1\cdots k_r}(M^{-1})_{k_1}^{i_1}\cdots(M^{-1})_{k_r}^{i_r}M_{j_1}^{l_1}\cdots M_{j_s}^{l_s},
+$$
+其中对所有哑指标作 Einstein 求和。
 
 **定理 23.3.1 (张量的缩并)**  对 $(r,s)$ 型张量，选取一对上、下指标求和并删去该对指标得到缩并，阶数降为 $(r-1,s-1)$。
 
@@ -1875,6 +2136,8 @@ $$
 
 **定理 24.1.4 (可逆线性算子的稳定性)**  可逆线性算子的集合是开集，且在该集合上取逆映射连续。
 
+**定理 24.1.5 (可逆线性算子的稳定性：范数判据)**  若 $A$ 可逆且 $B\in\mathcal{L}(\mathbf{R}^n)$ 满足 $\|B-A\|\cdot\|A^{-1}\|<1$，则 $B$ 可逆。
+
 ##### §24.2 微分与局部结构定理
 
 **定义 24.3 (Fréchet 导数与 Jacobian)**  可微映射在一点的一阶线性近似由 Jacobian 表示。
@@ -1899,6 +2162,12 @@ J\psi(x)=-\big[J_y f(x,\psi(x))\big]^{-1}J_x f(x,\psi(x)).
 $$
 
 **定理 24.6 (秩定理/常秩定理)**  常秩映射在局部可化为标准投影型坐标表达。
+
+**定理 24.6.1 (秩定理详述)**  设 $E\subset\mathbf{R}^n$ 为开集，$f:E\to\mathbf{R}^m$ 为 $C^1$ 映射，且对任意 $x\in E$，$Jf(x)$ 的秩为 $l$。固定 $x_0\in E$，令 $A=Jf(x_0)$，设 $Y_1=\operatorname{im} A$，$P$ 为 $\mathbf{R}^m$ 到 $Y_1$ 的投影，$Y_2=\ker P$。则存在开集 $U\subset E$（$x_0\in U$）与 $V\subset\mathbf{R}^n$，以及 $C^1$ 微分同胚 $H:V\to U$，使得
+$$
+f(H(x))=Ax+\varphi(Ax),\quad \forall x\in V,
+$$
+其中 $\varphi$ 是 $A(V)\subset Y_1$ 到 $Y_2$ 的 $C^1$ 映射。
 
 **定义 24.3.1 (方向导数)**  设 $f:\mathbf{R}^n\to\mathbf{R}$，若
 $$
@@ -1935,6 +2204,11 @@ $$
 **定义 24.3.2 (Lipschitz 条件)**  存在 $L$ 使
 $$
 \|f(x)-f(y)\|\le L\|x-y\|.
+$$
+
+**定理 24.3.4 (线性变换的体积公式)**  设 $\varphi:\mathbf{R}^n\to\mathbf{R}^n$ 为线性映射，$A\subset\mathbf{R}^n$ 可求体积，则 $\varphi(A)$ 也可求体积，且
+$$
+\nu(\varphi(A))=|\det\varphi|\,\nu(A).
 $$
 
 **定理 24.3.3 (重积分换元法)**  可逆可微变换下积分满足 Jacobian 行列式变换律。
