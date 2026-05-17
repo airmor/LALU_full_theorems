@@ -1425,7 +1425,7 @@ $$
 
 ##### §15.1 对角化条件与求解
 
-**定理 15.0 (对角矩阵等价一维不变子空间)**  设 $V$ 是 $n$ 维线性空间，$\sigma\in\mathcal{L}(V)$ 在基 $B=\{\alpha_1,\ldots,\alpha_n\}$ 下的表示矩阵为对角矩阵 $\diag(d_1,\ldots,d_n)$，当且仅当 $V$ 能分解为 $\sigma$ 的一维不变子空间直和 $V=U_1\oplus\cdots\oplus U_n$，其中 $U_i=\operatorname{span}(\alpha_i)$.
+**定理 15.0 (对角矩阵等价一维不变子空间)**  设 $V$ 是 $n$ 维线性空间，$\sigma\in\mathcal{L}(V)$ 在基 $B=\{\alpha_1,\ldots,\alpha_n\}$ 下的表示矩阵为对角矩阵 $\operatorname{diag}(d_1,\ldots,d_n)$，当且仅当 $V$ 能分解为 $\sigma$ 的一维不变子空间直和 $V=U_1\oplus\cdots\oplus U_n$，其中 $U_i=\operatorname{span}(\alpha_i)$.
 
 **定义 15.1 (可对角化)**  若 $\exists P$ 可逆使 $P^{-1}AP$ 为对角矩阵，则称 $A$ 可对角化。
 
